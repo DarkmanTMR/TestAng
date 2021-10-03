@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IAuthor} from "../../models/iauthor";
+import {IBook} from "../../models/ibook";
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,7 @@ private _url = 'http://localhost:8080/authors'
   getAllAuthors(): Observable<IAuthor[]>{
       return this.httpClient.get<IAuthor[]>(this._url);
   }
+  // getAuthorsBooks(): Observable<IBook[]>{
+  // return this.httpClient.get<IBook[]>(this._url);
+  // }
 }

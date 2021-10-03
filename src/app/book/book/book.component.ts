@@ -19,5 +19,6 @@ export class BookComponent implements OnInit {
 
   bookDetails(){
     this.router.navigate(['books', this.book.id],{state:this.book})
+    console.log(this.book)
   }
 }

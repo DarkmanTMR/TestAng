@@ -11,16 +11,18 @@ import {IBook} from "../../models/ibook";
 export class AuthorDetailsComponent implements OnInit {
 
   author: IAuthor;
-
+  book: IBook;
 
   constructor(private router : Router, private activatedRoute: ActivatedRoute) {
     this.author = this.router.getCurrentNavigation()?.extras.state as IAuthor;
-  }
+     }
 
   ngOnInit(): void {
   }
 
-
+  authorsBooks() {
+    this.router.navigate(['authors/:id/books', this.author.books], {state: this.author})
+  }
 
 
 }

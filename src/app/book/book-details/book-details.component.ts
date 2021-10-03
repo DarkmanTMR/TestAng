@@ -18,4 +18,7 @@ export class BookDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  BooksAuthors() {
+    this.router.navigate(['books/:id/authors', this.book.authors], {state: this.book})
+  }
 }

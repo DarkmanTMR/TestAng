@@ -1,10 +1,13 @@
 {{author?.id}}<br>
 name: {{author?.name}} {{author?.surname}}
-<ul>
-  <li *ngFor="let book of author.books" [title]="book?.title">
-    {{author?.books}}
-  </li>
-</ul>
+<button (click)="authorsBooks()">books</button>
+
+<!--<ul>-->
+<!--  <li *ngFor="let book of author.books">-->
+<!--          {{book.title}}-->
+<!--  </li>-->
+<!--</ul>-->
+
 
 
 
